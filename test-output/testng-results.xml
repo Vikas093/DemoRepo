@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="73079" started-at="2018-05-16T23:30:44Z" finished-at="2018-05-16T23:31:57Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="73079" started-at="2018-05-16T23:30:44Z" finished-at="2018-05-16T23:31:57Z">
+      <class name="com.crm.qa.testCases.HomePageTest">
+        <test-method status="PASS" signature="registerLogFile()[pri:0, instance:com.crm.qa.testCases.HomePageTest@7fac631b]" name="registerLogFile" is-config="true" duration-ms="24" started-at="2018-05-16T23:30:44Z" finished-at="2018-05-16T23:30:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerLogFile -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testCases.HomePageTest@7fac631b]" name="setUp" is-config="true" duration-ms="23081" started-at="2018-05-16T23:30:44Z" finished-at="2018-05-16T23:31:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="homePageTitleTest()[pri:1, instance:com.crm.qa.testCases.HomePageTest@7fac631b]" name="homePageTitleTest" duration-ms="25" started-at="2018-05-16T23:31:07Z" finished-at="2018-05-16T23:31:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageTitleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testCases.HomePageTest@7fac631b]" name="tearDown" is-config="true" duration-ms="420" started-at="2018-05-16T23:31:07Z" finished-at="2018-05-16T23:31:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testCases.HomePageTest@7fac631b]" name="setUp" is-config="true" duration-ms="20638" started-at="2018-05-16T23:31:07Z" finished-at="2018-05-16T23:31:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="correctUserNameTest()[pri:2, instance:com.crm.qa.testCases.HomePageTest@7fac631b]" name="correctUserNameTest" duration-ms="5324" started-at="2018-05-16T23:31:28Z" finished-at="2018-05-16T23:31:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- correctUserNameTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testCases.HomePageTest@7fac631b]" name="tearDown" is-config="true" duration-ms="348" started-at="2018-05-16T23:31:33Z" finished-at="2018-05-16T23:31:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testCases.HomePageTest@7fac631b]" name="setUp" is-config="true" duration-ms="20679" started-at="2018-05-16T23:31:33Z" finished-at="2018-05-16T23:31:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="clickOnContactsLinkTest()[pri:3, instance:com.crm.qa.testCases.HomePageTest@7fac631b]" name="clickOnContactsLinkTest" duration-ms="2035" started-at="2018-05-16T23:31:54Z" finished-at="2018-05-16T23:31:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnContactsLinkTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testCases.HomePageTest@7fac631b]" name="tearDown" is-config="true" duration-ms="453" started-at="2018-05-16T23:31:56Z" finished-at="2018-05-16T23:31:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.crm.qa.testCases.HomePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
