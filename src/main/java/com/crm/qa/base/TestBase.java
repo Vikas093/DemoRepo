@@ -1,4 +1,4 @@
-package com.crm.qa.base;
+ package com.crm.qa.base;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -24,7 +24,7 @@ public class TestBase
 
 	@BeforeTest
 	public void registerLogFile(){
-		PropertyConfigurator.configure("C:\\FrameWork Design\\FreeCRMTest\\src\\main\\resources\\log4j.properties");
+		PropertyConfigurator.configure("C:\\clonecode\\DemoRepo\\src\\main\\resources\\log4j.properties");
 	}
 
 
@@ -40,8 +40,7 @@ public class TestBase
 		prop=new Properties();
 		try
 		{
-			FileInputStream ip=new FileInputStream("C:\\FrameWork Design\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\"
-					+ "config\\config.properties");
+			FileInputStream ip=new FileInputStream("C:\\clonecode\\DemoRepo\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 			try 
 			{
 				prop.load(ip);
@@ -70,12 +69,12 @@ public class TestBase
 		String browserName=prop.getProperty("browser");
 		if(browserName.equalsIgnoreCase("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver","C:\\FrameWork Design\\FreeCRMTest\\driver\\chromedriver.exe" );
+			System.setProperty("webdriver.chrome.driver","C:\\clonecode\\DemoRepo\\driver\\chromedriver.exe" );
 			driver=new ChromeDriver();
 		}
 		else if(browserName.equalsIgnoreCase("gecko"))
 		{
-			System.setProperty("webdriver.gecko.driver","C:\\FrameWork Design\\FreeCRMTest\\driver\\geckodriver.exe" );
+			System.setProperty("webdriver.gecko.driver","C:\\clonecode\\DemoRepo\\driver\\geckodriver.exe" );
 			driver=new FirefoxDriver();
 		}
 		
