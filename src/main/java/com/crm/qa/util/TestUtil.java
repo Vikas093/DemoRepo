@@ -7,6 +7,8 @@ import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -103,9 +105,9 @@ public class TestUtil extends TestBase{
 		createSelectclassObject(web);
 		select.selectByVisibleText(TxtName);
 	}
-	
+
 	//---------------Utility for taking screen shot-------------------------------------------------
-	
+
 	/*public static void takeScreenShot(WebDriver driver,String filename)
 	{
 		TakesScreenshot screenshot=(TakesScreenshot)driver;
@@ -154,5 +156,94 @@ public class TestUtil extends TestBase{
 		return data;
 	}
 
+	// Highlighting web element by using javascript executer
+
+	public static void flash(WebElement element,WebDriver driver)
+	{
+		String bgColor=	element.getCssValue("backgroung color");
+		for(int i=0;i<100;i++)
+		{
+			changeColor(bgColor,element,driver);
+		}
+	}
+	// Highlighting web element by using javascript executer
+
+	public static void changeColor(String color, WebElement element, WebDriver driver) 
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].style.backgroundColor='"+color+"'", element);
+	}
+
+	//Drawing border in the element
+
+	public static void drawBorder(WebElement element, WebDriver driver) 
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].style.border='3px solid red'", element);
+	}
+
+	//Generate java script alert in any element if error is there
+	public static void generateAlert(WebDriver driver,String message) 
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("alert('"+message+"'");
+	}
+
+	//Clicking on the web element by using java script executor
+	public static void ClickElementByJavaScript(WebDriver driver,WebElement element) 
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arugement[0].click",element);
+	}
+
+	//Refreshing a page by java Script
+	public static void refreshBrowserByJs(WebDriver driver) 
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("history.go(0)");
+	}
+
+	//get title of the webpage by javascript executor
+	public static String getTitleByJs(WebDriver driver) 
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		String title=js.executeScript("return document.title").toString();
+		return title;
+	}
+
+	//Get all the page text of 
+	public static String getPageInnerTextByJs(WebDriver driver) 
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		String pageText=js.executeScript("return document.documentElement.innerText").toString();
+		return pageText;
+	}
 	
+	//Get the text of a particular web element
+	public static String getTxtOfElementByJs(WebDriver driver) 
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		String elementText=js.executeScript("return document.getElementById('email').innerHTML;").toString();
+		return elementText;
+	}
+	
+	//To scroll the window upto a limit by using javascript executor
+	public static void scrollPageDownUptoALimitByJs(WebDriver driver) 
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,500)");
+	
+	}
+	//To scroll the window upto bottom of page by using javascript executor
+	public static void scrollPageDownUptoBottomByJs(WebDriver driver) 
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+	
+	}
+	
+
+
+
+
 }
